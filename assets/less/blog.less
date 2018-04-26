@@ -1,0 +1,121 @@
+// main: master.less
+
+.post__list {
+    margin: 50px 0;
+
+    @media screen and (min-width: @screen-md) {
+        margin: 100px 0;
+    }
+}
+
+.post {
+    padding: 50px 0;
+}
+
+
+
+.post__list--title,
+.post--title {
+    margin-bottom: 0;
+    margin-top: 15px;
+    color: @font-head-color;
+    font-weight: 700;
+    text-decoration: none;
+    
+    a {
+        &:link {
+            color: @font-head-color;
+            text-decoration: none;
+        }
+        &:visited {
+            color: @font-head-color;
+            text-decoration: none;
+        }
+        &:hover {
+            color: @color-primary;
+            text-decoration: none;
+        }
+        &:active {
+            color: @color-primary;
+            text-decoration: none;
+        }
+    }
+}
+
+.post__list--date,
+.post--details {
+    color: #696969;
+    text-transform: uppercase;
+    font-family: @font-head;
+    font-weight: 300;
+    font-size: .6em;
+    letter-spacing: 1px;
+}
+
+.post__list--categories,
+.post--categories {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        display: inline-block;
+        margin: 0 5px 0 0;
+
+        a {
+            padding: 2px 5px;
+            background-color: @color-primary;
+            color: #ffffff;
+            text-transform: uppercase;
+            font-family: @font-head;
+            font-weight: 700;
+            font-size: .75em;
+            letter-spacing: 1px;
+
+            &:hover {
+                text-decoration: none;
+                background-color: @color-borders;
+            }
+        }
+    }
+}
+
+.post__list--tags {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        display: inline-block;
+        margin: 0 5px 0 0;
+
+        a {
+            padding: 2px 5px;
+            background-color: #ffffff;
+            color: #d4d4d4;
+            border: 1px solid #d4d4d4;
+            text-transform: uppercase;
+            font-family: @font-head;
+            font-weight: 400;
+            font-size: .75em;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+.post--image {
+    width: 100%;
+    height: auto;
+
+    &.post--image-left {
+        float: left;
+        width: 50%;
+        margin-right: 15px;
+    }
+
+    &.post--image-right {
+        float: right;
+        width: 50%;
+        margin-left: 15px;
+    }
+}

@@ -1,0 +1,39 @@
+// main: master.less
+
+#main__footer {
+    background-color: @footer-color-bg;
+    color: @footer-color;
+    padding-top: @grid-padding * 2;
+    padding-bottom: @grid-padding * 2;
+
+    .main__footer--items {
+        margin: 0;
+        padding: 0;
+
+        .main__footer--item {
+            display: inline-block;
+            margin-right: 10px;
+
+            a {
+                font-weight: 700;
+                font-size: .85em;
+                color: @footer-color-link;
+
+                &:hover {
+                    color: lighten(@footer-color-link, 5%);
+                }
+            }
+        }
+    }
+
+    .main__footer--copy {
+        margin: @grid-padding 0 0;
+        font-size: .7em;
+        color: #aeaeae;
+
+        a {
+            color: #aeaeae;
+            font-weight: 400;
+        }
+    }
+}

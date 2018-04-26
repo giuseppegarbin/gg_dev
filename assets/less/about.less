@@ -1,0 +1,32 @@
+ // main: master.less
+
+.about__hero {
+    text-align: center;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid @color-borders;
+    padding: 50px 0;
+
+    .container {
+        @media (min-width: @screen-md) {
+            width: 960px;
+        }
+        @media (min-width: @screen-lg) {
+            width: 1000px;
+        }
+        @media (min-width: @screen-hg) {
+            width: 1200px;
+        }
+    }
+
+    h1 {
+        letter-spacing: -1px;
+        span {
+            font-style: italic;
+        }
+    }
+    
+    p {
+        color: @font-head-color;
+        margin-bottom: 0;
+    }
+}
