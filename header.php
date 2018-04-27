@@ -54,15 +54,18 @@
             </div>
 
             <div id="nav__toggle">
-                <nav class="nav__box">
-                    <ul class="nav__box--items">
-                        <li><a href="#">Web Design</a></li>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Analytics</a></li>
-                        <li><a href="#">Social Media</a></li>
-                        <li><a href="#">Paid & Cpc</a></li>
-                    </ul>
-                </nav>
+                <?php 
+                    wp_nav_menu( array(
+                        'container' => 'nav', 
+                        'container_class' => 'nav__box',
+                        'container_id' => '',
+                        'menu_class' => 'nav__box--items',
+                        'menu_id' => '',
+                        'depth' => 1,
+                        'items_wrap' => '<ul class="%2$s">%3$s</ul>',
+                        'theme_location' => 'main-menu'
+                    ) ); 
+                ?>
             </div>
         </div>
     </header>
