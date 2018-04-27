@@ -9,7 +9,7 @@
 
 
 /**
- * NAvigation menus
+ * Navigation menus
  *
  */
 function register_my_menus() {

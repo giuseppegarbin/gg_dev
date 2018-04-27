@@ -4,15 +4,25 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-                        <ul class="main__footer--items">
-                            <li class="main__footer--item"><a href="#">About</a></li>
-                            <li class="main__footer--item"><a href="#">Contatti</a></li>
-                        </ul>
+
+                        <?php 
+                            wp_nav_menu( array(
+                                'container' => 'nav', 
+                                'container_class' => '',
+                                'container_id' => '',
+                                'menu_class' => 'main__footer--items',
+                                'menu_id' => '',
+                                'depth' => 1,
+                                'items_wrap' => '<ul class="%2$s">%3$s</ul>',
+                                'theme_location' => 'footer-menu'
+                            ) ); 
+                        ?>
+
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
-                        <p class="main__footer--copy">&copy; 2018 Giuseppe Garbin<br/><a href="#">Termini di utilizzo</a>, <a href="#">Privacy & Cookies</a></p>    
+                        <p class="main__footer--copy">&copy; <?php echo date("Y", time()); ?> Giuseppe Garbin</p>    
                     </div>
                 </div>
             </div>

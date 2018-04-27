@@ -1754,16 +1754,16 @@ p a {
   margin: 0;
   padding: 0;
 }
-#main__footer .main__footer--items .main__footer--item {
+#main__footer .main__footer--items .menu-item {
   display: inline-block;
   margin-right: 10px;
 }
-#main__footer .main__footer--items .main__footer--item a {
+#main__footer .main__footer--items .menu-item a {
   font-weight: 700;
   font-size: .85em;
   color: #1a1a1a;
 }
-#main__footer .main__footer--items .main__footer--item a:hover {
+#main__footer .main__footer--items .menu-item a:hover {
   color: #272727;
 }
 #main__footer .main__footer--copy {
