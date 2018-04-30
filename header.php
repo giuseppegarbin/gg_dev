@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<html lang="it-IT">
+<html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Viewoport -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-    <!-- Page Title -->
-    <title><?php echo bloginfo( 'name' ) ?></title>
 
     <!-- Style -->
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/aos.css">
@@ -19,7 +16,7 @@
     <?php wp_head(); ?>
 
 </head>
-<body>
+<body <?php body_class( $class ); ?>>
     
     <header id="nav" class="nav__bar">
         <div class="container-fluid clearfix">

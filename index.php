@@ -9,7 +9,7 @@
 
                         	<?php get_template_part( 'template-parts/post-list', get_post_format() ); ?>
 
-						<?php endwhile; endif; ?>
+												<?php endwhile; endif; ?>
 
 
                     </div>

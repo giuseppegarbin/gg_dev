@@ -9,16 +9,22 @@
             </div>
         </div>
     </section>
-
-            <div class="container" id="blog">
-                <div class="row">
-                    <div class="col-xs-12">
+    
+    <section class="page--content">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
                      
-                        <?php the_content(); ?>   
+                    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-                    </div>
+                        <?php the_content(); ?>
+
+                    <?php endwhile; endif; ?> 
+
                 </div>
             </div>
+        </div>
+    </section>
 
 <?php get_footer(); ?>
 

@@ -21,6 +21,8 @@
     color: @font-head-color;
     font-weight: 700;
     text-decoration: none;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
     
     a {
         &:link {
@@ -40,6 +42,10 @@
             text-decoration: none;
         }
     }
+}
+
+.post--title {
+    margin-bottom: 30px;
 }
 
 .post__list--date,
@@ -95,7 +101,8 @@
     }
 }
 
-.post__list--tags {
+.post__list--tags,
+.post--tags {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -115,6 +122,14 @@
             font-size: .75em;
             letter-spacing: 1px;
         }
+    }
+}
+
+.post--featured-image {
+
+    img {
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -176,7 +191,7 @@
 .social__share {
     display: block;
     width: 100%;
-    margin: 0;
+    margin: 0 0 50px;
     padding: 0;
     list-style: none;
 
