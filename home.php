@@ -14,18 +14,22 @@
             <div class="container" id="blog">
                 <div class="row">
                     <div class="col-xs-12">
-                     
 
-                        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                        <?php if ( have_posts() ) : ?>
 
-                        	<?php get_template_part( 'template-parts/post-list', get_post_format() ); ?>
+                            <?php while ( have_posts() ) : the_post(); ?>
+                                
+                                <?php get_template_part( 'template-parts/post-list', get_post_format() ); ?>
+                                
+                            <?php endwhile; ?>
+                            
+                            <?php get_template_part( 'inc/pagination', get_post_format() ); ?>
+                        
+                        <?php else : ?>
+                            
+                            <p class="text-alert">Oops... Non è stato trovato nessun post.</p>
 
-						<?php endwhile; endif; ?>
-
-                        <hr>
-
-                        <div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
-                        <div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
+                        <?php endif; ?>
 
 
                     </div>

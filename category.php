@@ -15,11 +15,21 @@
                 <div class="row">
                     <div class="col-xs-12">
 
-                        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                        <?php if ( have_posts() ) : ?>
 
-                            <?php get_template_part( 'template-parts/post-list', get_post_format() ); ?>
+                            <?php while ( have_posts() ) : the_post(); ?>
+                                
+                                <?php get_template_part( 'template-parts/post-list', get_post_format() ); ?>
+                                
+                            <?php endwhile; ?>
+                            
+                            <?php get_template_part( 'inc/pagination', get_post_format() ); ?>
+                        
+                        <?php else : ?>
+                            
+                            <p class="text-alert">Oops... Non è stato trovato nessun post.</p>
 
-						<?php endwhile; endif; ?>
+                        <?php endif; ?>
 
                     </div>
                 </div>

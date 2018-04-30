@@ -16,8 +16,7 @@ function register_my_menus() {
   register_nav_menus(
     array(
       'main-menu' => __( 'Main Menu' ),
-      'footer-menu' => __( 'Footer Menu' ),
-      'subfooter-menu' => __( 'Subfooter Menu' )
+      'footer-menu' => __( 'Footer Menu' )
      )
    );
  }
@@ -41,7 +40,7 @@ add_filter( 'get_the_archive_title', function ($title) {
 
         } elseif ( is_author() ) {
 
-            $title = '<span class="vcard">' . get_the_author() . '</span>' ;
+            $title = get_the_author();
 
         }
 
